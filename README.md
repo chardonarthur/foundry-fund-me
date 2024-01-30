@@ -64,3 +64,38 @@ $ forge --help
 $ anvil --help
 $ cast --help
 ```
+
+```shell
+#Open VScode
+$ code .
+
+#Initialization
+$ forge init --force
+
+#install chainlink contracts
+$ forge install smartcontractkit/chainlink-brownie-contracts@0.8.0 --no-commit
+
+#Compiler
+$ forge build
+
+#Test
+$ forge test -vv
+
+#import .env
+$ source .env
+#checker if works
+$ forge test --match-test testPriceFeedVersionIsAccurate -vvv --fork-url $SEPOLIA_URPC_URL
+
+#test on sepolia network
+$ forge test --fork-url $SEPOLIA_RPC_URL
+
+#execute solidity from terminal
+$ chisel
+$ CTRL+K to clean terminal
+
+#check how much gas a function const
+$ forge snapshot --match-test testWithdrawFromMultipleFunders
+
+
+```
+
